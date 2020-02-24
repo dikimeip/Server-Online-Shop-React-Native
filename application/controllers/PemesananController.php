@@ -47,6 +47,18 @@ class PemesananController extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function pemesanan_delete($id)
+	{
+		$query = $this->MyModel->pemesanan_delete($id);
+		if ($query == 1) {
+			$this->session->set_flashdata('success','Success Remove Data');
+			redirect('PemesananController');
+		} else {
+			$this->session->set_flashdata('success','Failed Remove Data');
+			redirect('PemesananController');
+		}
+	}
+
 	
 
 }

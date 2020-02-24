@@ -61,4 +61,15 @@ class MyModel extends CI_Model
 
 	}
 
+	public function pemesanan_delete($id)
+	{
+		$response = $this->_client->request('DELETE','PemesananController',[
+			'query' => [
+				'id' => $id
+			]
+		]);
+		$result = json_decode($response->getBody()->getContents(),true);
+		return $result['status'];
+	}
+
 }
