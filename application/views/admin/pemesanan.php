@@ -27,7 +27,7 @@
 			<td><?php echo $pesan['tanggal'] ?></td>
 			<td><?php echo $pesan['status_kirim'] ?></td>
 			<td>
-				<a href="" class="btn btn-warning btn-sm">UBAH</a>
+				<a href="<?php echo base_url() ?>PemesananController/pemesanan_put/<?php echo $pesan['id_pemesanan'] ?>" class="btn btn-warning btn-sm">UBAH</a>
 				<a href="" class="btn btn-info btn-sm">DETAIL</a>
 				<a href="" class="btn btn-danger btn-sm">HAPUS</a>
 			</td>

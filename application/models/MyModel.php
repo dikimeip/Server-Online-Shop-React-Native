@@ -34,4 +34,16 @@ class MyModel extends CI_Model
 		$result = json_decode($response->getBody()->getContents(),true);
 		return $result['value'];
 	}
+
+	public function pemesanan_get_id($id)
+	{
+		$response = $this->_client->request('GET','LoginController',[
+			'query' => [
+				'id' => $id
+			]
+		]);
+		$result = json_decode($response->getBody()->getContents(),true);
+		return $result['value'][0];
+	}
+
 }
