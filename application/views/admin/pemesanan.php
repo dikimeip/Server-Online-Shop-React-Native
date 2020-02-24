@@ -9,6 +9,12 @@
 		</form>
 	</div>
 </div>
+<?php if ($this->session->flashdata('success')): ?>
+	<div class="alert alert-success">
+		<p class="text-center"><?php echo $this->session->flashdata('success') ?></p>
+	</div>
+<?php endif ?>
+
 <hr>
 <table class="table table-hover" style="background-color: white">
 	<tr>

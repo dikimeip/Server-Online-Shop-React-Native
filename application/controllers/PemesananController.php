@@ -27,6 +27,18 @@ class PemesananController extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function pemesanan_putData()
+	{
+		$query = $this->MyModel->pemesanan_put();
+		if ($query == 1) {
+			$this->session->set_flashdata('success','Success Update Data');
+			redirect('PemesananController');
+		} else {
+			$this->session->set_flashdata('success','Failed Update Data');
+			redirect('PemesananController');
+		}
+	}
+
 	
 
 }

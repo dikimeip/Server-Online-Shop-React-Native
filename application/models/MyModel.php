@@ -46,4 +46,19 @@ class MyModel extends CI_Model
 		return $result['value'][0];
 	}
 
+	public function pemesanan_put()
+	{
+		$data = [
+			'id' => $this->input->post('id_pemesanan'),
+			'status' => $this->input->post('status')
+		];
+		
+		$response = $this->_client->request('PUT','PemesananController',[
+			'form_params' => $data
+		]);
+		$result = json_decode($response->getBody()->getContents(),true);
+		return $result['status'];
+
+	}
+
 }
