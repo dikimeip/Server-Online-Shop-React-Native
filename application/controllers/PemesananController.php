@@ -59,6 +59,13 @@ class PemesananController extends CI_Controller {
 		}
 	}
 
+	public function pemesanan_cetak()
+	{
+		$data['pemesanan'] = $this->MyModel->pemesanan_get();
+		$data['nomer'] = 1;
+		$this->load->view('admin/cetak_pemesanan',$data);
+	}
+
 	
 
 }

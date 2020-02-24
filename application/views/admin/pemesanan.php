@@ -1,6 +1,8 @@
 <h1 class="text-center">PEMESANAN PAGE</h1>
 <div class="row">
-	<div class="col-md-8"></div>
+	<div class="col-md-8">
+		<a target="_BLANK" href="<?php echo base_url() ?>PemesananController/pemesanan_cetak" class="btn btn-success btn-sm">CETAK</a>
+	</div>
 	<div class="col-md-4">
 		<form>
 			<div class="form-group">
