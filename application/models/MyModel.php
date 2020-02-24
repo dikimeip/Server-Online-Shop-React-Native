@@ -27,4 +27,11 @@ class MyModel extends CI_Model
 		$result = json_decode($response->getBody()->getContents(),true);
 		return $result['status'];
 	}
+
+	public function pemesanan_get()
+	{
+		$response = $this->_client->request('GET','PemesananController');
+		$result = json_decode($response->getBody()->getContents(),true);
+		return $result['value'];
+	}
 }

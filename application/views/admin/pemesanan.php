@@ -4,7 +4,7 @@
 	<div class="col-md-4">
 		<form>
 			<div class="form-group">
-				<input type="text" name="cari" class="form-control" placeholder="Masukan Invoice Pemesanan">
+				<input type="text" name="cari" class="form-control" placeholder="Masukan Nama User">
 			</div>
 		</form>
 	</div>
@@ -19,7 +19,18 @@
 		<th>KETERANGAN</th>
 		<th>AKSI</th>
 	</tr>
-	<tr>
-		
-	</tr>
+	<?php foreach ($pemesanan as $pesan):?>
+		<tr>
+			<td><?php echo $nomer++ ?></td>
+			<td><?php echo $pesan['nama_produk'] ?></td>
+			<td><?php echo $pesan['username'] ?></td>
+			<td><?php echo $pesan['tanggal'] ?></td>
+			<td><?php echo $pesan['status_kirim'] ?></td>
+			<td>
+				<a href="" class="btn btn-warning btn-sm">UBAH</a>
+				<a href="" class="btn btn-info btn-sm">DETAIL</a>
+				<a href="" class="btn btn-danger btn-sm">HAPUS</a>
+			</td>
+		</tr>
+	<?php endforeach ?>
 </table>

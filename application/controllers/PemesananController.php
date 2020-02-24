@@ -12,14 +12,13 @@ class PemesananController extends CI_Controller {
 
 	public function index()
 	{
+		$data['pemesanan'] = $this->MyModel->pemesanan_get();
+		$data['nomer'] = 1;
 		$this->load->view('template/header');
-		$this->load->view('admin/pemesanan');
+		$this->load->view('admin/pemesanan',$data);
 		$this->load->view('template/footer');
 	}
 
-	public function pemesanan_get()
-	{
-		# code...
-	}
+	
 
 }
