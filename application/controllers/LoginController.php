@@ -20,6 +20,9 @@ class LoginController extends CI_Controller {
 		$password = $this->input->post('password');
 		$query = $this->MyModel->login_admin($username,$password);
 		if ($query == 1) {
+			$this->session->set_userdata([
+				'user' => 'isAdmin' 
+			]);
 			redirect('DasboardController');
 		} else {
 			$this->session->set_flashdata('success','Failed Login');

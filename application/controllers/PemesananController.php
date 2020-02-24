@@ -7,7 +7,10 @@ class PemesananController extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('MyModel');
-
+		if ($this->session->userdata('user') !== 'isAdmin') {
+			$this->session->set_flashdata('success','Failed Login');
+			redirect('LoginController');
+		}
 	}
 
 	public function index()
