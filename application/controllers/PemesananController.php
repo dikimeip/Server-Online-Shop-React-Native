@@ -39,6 +39,14 @@ class PemesananController extends CI_Controller {
 		}
 	}
 
+	public function pemesanan_show($id)
+	{
+		$data['pemesanan'] = $this->MyModel->pemesanan_get_id($id);
+		$this->load->view('template/header');
+		$this->load->view('admin/show_pemesanan',$data);
+		$this->load->view('template/footer');
+	}
+
 	
 
 }
