@@ -69,7 +69,7 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                                <a class="nav-link active" href="<?php echo base_url('DasboardController') ?>"><i class="fa fa-fw fa-user-circle"></i>Dashboard</a>
                             </li>
                              <li class="nav-item ">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Produk</a>
@@ -78,7 +78,7 @@
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>FlashSale</a>
                             </li>
                              <li class="nav-item ">
-                                <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>Pemesanan</a>
+                                <a class="nav-link" href="<?php echo base_url('PemesananController') ?>"><i class="fa fa-fw fa-user-circle"></i>Pemesanan</a>
                             </li>
                              <li class="nav-item ">
                                 <a class="nav-link" href="#"><i class="fa fa-fw fa-user-circle"></i>User</a>
