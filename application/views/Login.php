@@ -36,16 +36,22 @@
         <div class="card ">
             <div class="card-header text-center"><h1>TUKU SHOP</h1><span class="splash-description">Please enter your user information.</span></div>
             <div class="card-body">
-                <form>
+                <form action="<?php echo base_url('LoginController/do_login') ?>" method="post">
                     <div class="form-group">
-                        <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autocomplete="off">
+                        <input class="form-control form-control-lg" name="username" type="text" placeholder="Username" autocomplete="off">
                     </div>
                     <div class="form-group">
-                        <input class="form-control form-control-lg" id="password" type="password" placeholder="Password">
+                        <input class="form-control form-control-lg" name="password" type="password" placeholder="Password">
                     </div>
                     <div class="form-group">
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                    <br>
+                    <?php if ($this->session->flashdata('success')): ?>
+                         <div class="alert alert-danger">
+                            <p class="text-center"><?php echo $this->session->flashdata('success') ?></p>
+                        </div>
+                    <?php endif ?>
                 </form>
             </div>
         </div>
